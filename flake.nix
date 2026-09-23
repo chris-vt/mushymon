@@ -41,7 +41,7 @@
             runHook preInstall
             
             mkdir -p $out/share/mushymon
-            cp -r .next/standalone/* $out/share/mushymon/
+            cp -a .next/standalone/. $out/share/mushymon/
             
             # Next.js standalone doesn't include the public folder or static folder by default
             mkdir -p $out/share/mushymon/.next
