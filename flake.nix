@@ -19,7 +19,7 @@
           src = ./.;
 
           # We can use a fake hash to get the real one, or run prefetch-npm-deps
-          npmDepsHash = "sha256-kPUnes2j3UelMd3KGh6rYDqHuPC92rXH8Z2AyxHLFkY=";
+          npmDepsHash = "sha256-k5J2fNslPZazPlDmEzgUNjeb4xAOAChJnBcqyCAH5AU=";
 
           nativeBuildInputs = with pkgs; [
             python3
