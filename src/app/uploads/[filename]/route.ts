@@ -4,13 +4,13 @@ import { NextResponse } from "next/server";
 
 export async function GET(request: Request, { params }: { params: { filename: string } }) {
   const uploadDir = process.env.UPLOAD_DIR || path.join(process.cwd(), "public/uploads");
-  const filePath = path.join(uploadDir, params.filename);
+  const filePath = path.join(/*turbopackIgnore: true*/ uploadDir, params.filename);
   
-  if (!fs.existsSync(filePath)) {
+  if (!fs.existsSync(/*turbopackIgnore: true*/ filePath)) {
     return new NextResponse("Not found", { status: 404 });
   }
   
-  const file = fs.readFileSync(filePath);
+  const file = fs.readFileSync(/*turbopackIgnore: true*/ filePath);
   
   // Simple content type detection
   const ext = path.extname(params.filename).toLowerCase();
