@@ -13,7 +13,7 @@ export async function POST(request: Request) {
 
     const buffer = Buffer.from(await file.arrayBuffer());
     const filename = crypto.randomUUID() + "-" + file.name.replace(/[^a-zA-Z0-9.]/g, "");
-    const uploadDir = path.join(process.cwd(), "public/uploads");
+    const uploadDir = process.env.UPLOAD_DIR || path.join(process.cwd(), "public/uploads");
     
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });
