@@ -1,5 +1,5 @@
 {
-  description = "Mushemon - Mushroom Tracker Development Environment and Package";
+  description = "Mushymon - Mushroom Tracker Development Environment and Package";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -72,7 +72,7 @@
           ];
 
           shellHook = ''
-            echo "🍄 Mushemon development environment loaded!"
+            echo "🍄 Mushymon development environment loaded!"
           '';
         };
       }
